@@ -1,197 +1,198 @@
-```javascript
-// Q1: Write a program that checks if a number is positive, negative, or zero.
+// ============================================================
+//  CONDITIONAL STATEMENTS — JavaScript Practice Solutions
+// ============================================================
 
+// ─────────────────────────────────────────────────────────────
+// Q1: Write a program that checks if a number is positive, negative, or zero.
+// ─────────────────────────────────────────────────────────────
+console.log("─── Q1: Positive, Negative, or Zero ───");
 let number = -5;
 
 if (number > 0) {
-    console.log("Q1: Number is Positive");
+    console.log(`${number} is Positive`);
 } else if (number < 0) {
-    console.log("Q1: Number is Negative");
+    console.log(`${number} is Negative`);
 } else {
-    console.log("Q1: Number is Zero");
+    console.log("The number is Zero");
 }
 
-
+// ─────────────────────────────────────────────────────────────
 // Q2: Using an if-else statement, determine whether a given integer is even or odd.
-
-let num = 8;
+// ─────────────────────────────────────────────────────────────
+console.log("\n─── Q2: Even or Odd ───");
+let num = 7;
 
 if (num % 2 === 0) {
-    console.log("Q2: Number is Even");
+    console.log(`${num} is Even`);
 } else {
-    console.log("Q2: Number is Odd");
+    console.log(`${num} is Odd`);
 }
 
+// ─────────────────────────────────────────────────────────────
+// Q3: Write a program that takes two numbers and prints the larger one.
+// ─────────────────────────────────────────────────────────────
+console.log("\n─── Q3: Largest of Two Numbers ───");
+let a = 45, b = 78;
 
-// Q3: Write a program that takes two numbers and prints the larger one using conditional statements.
-
-let num1 = 25;
-let num2 = 40;
-
-if (num1 > num2) {
-    console.log("Q3: Larger number is " + num1);
-} else if (num2 > num1) {
-    console.log("Q3: Larger number is " + num2);
+if (a > b) {
+    console.log(`Larger number: ${a}`);
+} else if (b > a) {
+    console.log(`Larger number: ${b}`);
 } else {
-    console.log("Q3: Both numbers are equal");
+    console.log("Both numbers are equal");
 }
 
-
+// ─────────────────────────────────────────────────────────────
 // Q4: Using if-else-if, assign grades (A, B, C, D, F) based on a student's percentage score.
-
+// ─────────────────────────────────────────────────────────────
+console.log("\n─── Q4: Grade Evaluation ───");
 let percentage = 85;
 
-if (percentage >= 80) {
-    console.log("Q4: Grade A");
+if (percentage >= 90) {
+    console.log(`Score: ${percentage}% → Grade: A`);
+} else if (percentage >= 80) {
+    console.log(`Score: ${percentage}% → Grade: B`);
 } else if (percentage >= 70) {
-    console.log("Q4: Grade B");
+    console.log(`Score: ${percentage}% → Grade: C`);
 } else if (percentage >= 60) {
-    console.log("Q4: Grade C");
-} else if (percentage >= 50) {
-    console.log("Q4: Grade D");
+    console.log(`Score: ${percentage}% → Grade: D`);
 } else {
-    console.log("Q4: Grade F");
+    console.log(`Score: ${percentage}% → Grade: F`);
 }
 
-
-// Q5: Write a program that checks if a given year is a leap year using conditional statements.
-
+// ─────────────────────────────────────────────────────────────
+// Q5: Write a program that checks if a given year is a leap year.
+// ─────────────────────────────────────────────────────────────
+console.log("\n─── Q5: Leap Year Check ───");
 let year = 2024;
 
+// Leap year rules:
+//   • Divisible by 4           → leap year
+//   • But divisible by 100     → NOT a leap year
+//   • Unless divisible by 400  → IS a leap year
 if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-    console.log("Q5: " + year + " is a Leap Year");
+    console.log(`${year} is a Leap Year ✓`);
 } else {
-    console.log("Q5: " + year + " is not a Leap Year");
+    console.log(`${year} is NOT a Leap Year ✗`);
 }
 
-
-// Q6: Use a switch-case to print the name of the day when given a number.
-
+// ─────────────────────────────────────────────────────────────
+// Q6: Use a switch-case to print the name of the day (1 = Monday … 7 = Sunday).
+// ─────────────────────────────────────────────────────────────
+console.log("\n─── Q6: Day of the Week ───");
 let day = 3;
 
 switch (day) {
-    case 1:
-        console.log("Q6: Monday");
-        break;
-    case 2:
-        console.log("Q6: Tuesday");
-        break;
-    case 3:
-        console.log("Q6: Wednesday");
-        break;
-    case 4:
-        console.log("Q6: Thursday");
-        break;
-    case 5:
-        console.log("Q6: Friday");
-        break;
-    case 6:
-        console.log("Q6: Saturday");
-        break;
-    case 7:
-        console.log("Q6: Sunday");
-        break;
-    default:
-        console.log("Q6: Invalid day number");
+    case 1:  console.log("Monday");    break;
+    case 2:  console.log("Tuesday");   break;
+    case 3:  console.log("Wednesday"); break;
+    case 4:  console.log("Thursday");  break;
+    case 5:  console.log("Friday");    break;
+    case 6:  console.log("Saturday");  break;
+    case 7:  console.log("Sunday");    break;
+    default: console.log("Invalid day number. Please enter 1–7.");
 }
 
-
-// Q7: Create a simple calculator using switch-case.
-
-let firstNumber = 20;
-let secondNumber = 5;
-let operator = "*";
+// ─────────────────────────────────────────────────────────────
+// Q7: Create a simple calculator using switch-case (+, -, *, /).
+// ─────────────────────────────────────────────────────────────
+console.log("\n─── Q7: Switch Calculator ───");
+let num1 = 20, num2 = 4, operator = '*';
 
 switch (operator) {
-    case "+":
-        console.log("Q7: Result = " + (firstNumber + secondNumber));
+    case '+':
+        console.log(`${num1} + ${num2} = ${num1 + num2}`);
         break;
-    case "-":
-        console.log("Q7: Result = " + (firstNumber - secondNumber));
+    case '-':
+        console.log(`${num1} - ${num2} = ${num1 - num2}`);
         break;
-    case "*":
-        console.log("Q7: Result = " + (firstNumber * secondNumber));
+    case '*':
+        console.log(`${num1} * ${num2} = ${num1 * num2}`);
         break;
-    case "/":
-        if (secondNumber !== 0) {
-            console.log("Q7: Result = " + (firstNumber / secondNumber));
+    case '/':
+        if (num2 === 0) {
+            console.log("Error: Division by zero is not allowed.");
         } else {
-            console.log("Q7: Cannot divide by zero");
+            console.log(`${num1} / ${num2} = ${num1 / num2}`);
         }
         break;
     default:
-        console.log("Q7: Invalid operator");
+        console.log("Invalid operator. Use +, -, *, or /");
 }
 
+// ─────────────────────────────────────────────────────────────
+// Q8: Write a program that checks whether a given character is a vowel or consonant.
+// ─────────────────────────────────────────────────────────────
+console.log("\n─── Q8: Vowel or Consonant ───");
+let char = 'e';
 
-// Q8: Write a program that checks whether a given character is a vowel or consonant using switch-case.
-
-let character = "a";
-
-switch (character.toLowerCase()) {
-    case "a":
-    case "e":
-    case "i":
-    case "o":
-    case "u":
-        console.log("Q8: " + character + " is a Vowel");
+switch (char.toLowerCase()) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+        console.log(`'${char}' is a Vowel`);
         break;
     default:
-        console.log("Q8: " + character + " is a Consonant");
+        if (/[a-zA-Z]/.test(char)) {
+            console.log(`'${char}' is a Consonant`);
+        } else {
+            console.log(`'${char}' is not an alphabetic character`);
+        }
 }
 
-
+// ─────────────────────────────────────────────────────────────
 // Q9: Using switch-case, print instructions based on traffic light color.
-
-let color = "Red";
+// ─────────────────────────────────────────────────────────────
+console.log("\n─── Q9: Traffic Light System ───");
+let color = 'Yellow';
 
 switch (color.toLowerCase()) {
-    case "red":
-        console.log("Q9: Stop");
+    case 'red':
+        console.log("🔴 Red    → STOP");
         break;
-    case "yellow":
-        console.log("Q9: Wait");
+    case 'yellow':
+        console.log("🟡 Yellow → WAIT");
         break;
-    case "green":
-        console.log("Q9: Go");
+    case 'green':
+        console.log("🟢 Green  → GO");
         break;
     default:
-        console.log("Q9: Invalid traffic light color");
+        console.log("Unknown light color. Please use Red, Yellow, or Green.");
 }
 
+// ─────────────────────────────────────────────────────────────
+// Q10: Menu-driven program (1=Check Balance, 2=Deposit, 3=Withdraw, 4=Exit)
+// Note: Input is simulated — in a real app use the readline module for live input.
+// ─────────────────────────────────────────────────────────────
+console.log("\n─── Q10: Menu-Driven Bank Program ───");
+let balance = 1000;
+let choice = 2;     // Simulated: user selects "Deposit"
+let amount = 500;   // Simulated deposit amount
 
-// Q10: Write a menu-driven program using switch-case.
-
-let choice = 2;
-let balance = 5000;
-let amount = 1000;
+console.log("1. Check Balance  2. Deposit  3. Withdraw  4. Exit");
+console.log(`Simulated choice: ${choice} | Amount: $${amount}\n`);
 
 switch (choice) {
     case 1:
-        console.log("Q10: Current Balance = " + balance);
+        console.log(`Current Balance: $${balance}`);
         break;
-
     case 2:
-        balance = balance + amount;
-        console.log("Q10: Deposit successful");
-        console.log("Q10: New Balance = " + balance);
+        balance += amount;
+        console.log(`✅ Deposited $${amount}.  New Balance: $${balance}`);
         break;
-
     case 3:
-        if (amount <= balance) {
-            balance = balance - amount;
-            console.log("Q10: Withdrawal successful");
-            console.log("Q10: New Balance = " + balance);
+        if (amount > balance) {
+            console.log("❌ Insufficient funds.");
         } else {
-            console.log("Q10: Insufficient balance");
+            balance -= amount;
+            console.log(`✅ Withdrew $${amount}.  Remaining Balance: $${balance}`);
         }
         break;
-
     case 4:
-        console.log("Q10: Exit");
+        console.log("👋 Thank you for banking with us. Goodbye!");
         break;
-
     default:
-        console.log("Q10: Invalid choice");
+        console.log("❌ Invalid choice. Please select 1–4.");
 }
-```
